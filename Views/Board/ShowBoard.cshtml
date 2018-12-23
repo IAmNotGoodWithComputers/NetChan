@@ -9,11 +9,18 @@
 
 <form asp-action="CreateThread" asp-route-shortName="@Model.ShortName" enctype="multipart/form-data">
     @await Component.InvokeAsync("CreateThread")
-    <input type="submit"/>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 
 @foreach (var thread in Model.Threads)
 {
-    @thread.Title <br>
+    <div>
+        <img src="~/uploads/@thread.Attachments.First()" class="img-thumbnail rounded float-left" style="width: 300px"/>
+        <div>
+            <h4><a asp-controller="Thread" asp-action="ShowThread" asp-route-threadId="@thread.Id" asp-route-boardShortName="@Model.ShortName">@thread.Title</a></h4>
+            <p>@thread.Content</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 }

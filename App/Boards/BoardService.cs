@@ -91,6 +91,7 @@ namespace NetChan.App.Boards
         public ShowBoardViewModel GetBoardByShortName(string shortName)
         {
             var threads = dbContext.Threads
+                .Include(t => t.Attachments)
                 .Include(t => t.Board)
                 .Where(t => t.Board.ShortName == shortName)
                 .ToList();
@@ -105,7 +106,12 @@ namespace NetChan.App.Boards
             var threadList = new List<ShowBoardViewModelThread>();
             foreach (var t in threads)
             {
-                threadList.Add(new ShowBoardViewModelThread(t.Id.ToString(), t.Title, t.Content, t.CreateDate));
+                threadList.Add(new ShowBoardViewModelThread(
+                    t.Id.ToString(), 
+                    t.Title, 
+                    t.Content, 
+                    t.CreateDate,
+                    t.Attachments.Select(a => $"{a.Id}.{a.Ext}")));
             }
             
             return new ShowBoardViewModel(board.Title, board.ShortName, threadList);

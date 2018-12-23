@@ -3,7 +3,9 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="list-group">
 @foreach (var board in Model.Boards)
 {
-    <a asp-controller="Board" asp-action="ShowBoard" asp-route-shortName="@board.ShortName">@board.ShortName</a> <br/>
+    <a class="list-group-item list-group-item-action" asp-controller="Board" asp-action="ShowBoard" asp-route-shortName="@board.ShortName">@board.ShortName</a> 
 }
+</div>

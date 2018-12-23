@@ -23,13 +23,16 @@ namespace NetChan.App.Boards.Views
         public readonly string Title;
         public readonly string Content;
         public readonly DateTime CreateDate;
+        public readonly IEnumerable<string> Attachments;
 
-        public ShowBoardViewModelThread(string id, string title, string content, DateTime date)
+        public ShowBoardViewModelThread(string id, string title, string content, DateTime date,
+            IEnumerable<string> attachments)
         {
             Id = id;
             Title = title;
             Content = content;
             CreateDate = date;
+            Attachments = attachments;
         }
     }
 }

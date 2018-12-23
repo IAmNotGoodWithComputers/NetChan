@@ -22,6 +22,5 @@ namespace NetChan.App.Threads.Views
         [FieldType(FieldTypes.File)]
         [Required]
         public List<IFormFile> Attachments { get; set; }
-
     }
 }
