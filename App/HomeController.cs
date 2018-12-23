@@ -12,9 +12,10 @@ namespace NetChan.Controllers
     {
         [Route("")]
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index([FromServices] IBoardService boardService)
         {
-            return View();
+            var boards = boardService.GetBoardList();
+            return View(boards);
         }
 
         [HttpGet]

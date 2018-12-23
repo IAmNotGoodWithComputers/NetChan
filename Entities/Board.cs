@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace NetChan.Entities
 {
     public class Board: EntityBase

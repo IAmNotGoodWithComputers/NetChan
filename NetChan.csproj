@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Lib" />
+    <Folder Include="Pages" />
   </ItemGroup>
 
 </Project>

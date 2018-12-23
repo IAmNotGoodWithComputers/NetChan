@@ -1,0 +1,19 @@
+@model NetChan.App.Boards.Views.ShowBoardViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>@Model.ShortName - @Model.Title</h2>
+
+<form asp-action="CreateThread" asp-route-shortName="@Model.ShortName" enctype="multipart/form-data">
+    @await Component.InvokeAsync("CreateThread")
+    <input type="submit"/>
+</form>
+
+
+@foreach (var thread in Model.Threads)
+{
+    @thread.Title <br>
+}

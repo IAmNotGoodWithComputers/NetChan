@@ -1,5 +1,9 @@
-﻿
+﻿@model NetChan.App.Boards.Views.BoardListViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
+@foreach (var board in Model.Boards)
+{
+    <a asp-controller="Board" asp-action="ShowBoard" asp-route-shortName="@board.ShortName">@board.ShortName</a> <br/>
+}
