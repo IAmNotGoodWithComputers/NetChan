@@ -75,7 +75,7 @@ namespace NetChan.App.Boards
                 }
 
                 a.Ext = attachment.FileName.Split(".").Last();
-                var fileStream = new FileStream(uploadPath + a.Id + a.Ext, FileMode.Create);
+                var fileStream = new FileStream(uploadPath + a.Id + "." + a.Ext, FileMode.Create);
                 attachment.CopyTo(fileStream);
                 thread.Attachments.Add(a);
                 dbContext.Add(a);
