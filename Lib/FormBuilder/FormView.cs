@@ -84,7 +84,7 @@ namespace NetChan.Lib.FormBuilder
         private IHtmlContent RenderTextAreaField(FormField viewField)
         {
             var textAreaTag = new TagBuilder("textarea");
-            textAreaTag.AddCssClass("form-control");
+            textAreaTag.AddCssClass("form-control form-control-sm");
             
             textAreaTag.Attributes["name"] = viewField.fieldName;
             textAreaTag.Attributes["id"] = viewField.fieldName;
@@ -101,7 +101,7 @@ namespace NetChan.Lib.FormBuilder
         private IHtmlContent RenderTextField(FormField viewField)
         {
             var inputTag = new TagBuilder("input");
-            inputTag.AddCssClass("form-control");
+            inputTag.AddCssClass("form-control form-control-sm");
             
             inputTag.Attributes["type"] = "text";
             inputTag.Attributes["name"] = viewField.fieldName;
@@ -128,7 +128,7 @@ namespace NetChan.Lib.FormBuilder
         protected IHtmlContent RenderPasswordField(FormField viewField)
         {
             var inputTag = new TagBuilder("input");
-            inputTag.AddCssClass("form-control");
+            inputTag.AddCssClass("form-control form-control-sm");
             
             inputTag.Attributes["type"] = "password";
             inputTag.Attributes["name"] = viewField.fieldName;
@@ -146,7 +146,7 @@ namespace NetChan.Lib.FormBuilder
         protected IHtmlContent RenderFileField(FormField viewField)
         {
             var inputTag = new TagBuilder("input");
-            inputTag.AddCssClass("form-control");
+            inputTag.AddCssClass("form-control form-control-file form-control-sm");
             
             inputTag.Attributes["type"] = "file";
             inputTag.Attributes["name"] = viewField.fieldName;

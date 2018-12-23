@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using NetChan.Lib.FormBuilder;
 using NetChan.Lib.FormBuilder.Attributes;
 
-namespace NetChan.App.Threads
+namespace NetChan.App.Threads.Views
 {
     public class CreateThreadFormModel
     {

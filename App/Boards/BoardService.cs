@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using NetChan.App.Boards.Views;
 using NetChan.App.Threads;
+using NetChan.App.Threads.Views;
 using NetChan.Entities;
 
 namespace NetChan.App.Boards

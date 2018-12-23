@@ -1,8 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NetChan.App.Threads.Views;
 using NetChan.Lib.FormBuilder;
 
-namespace NetChan.App.Threads
+namespace NetChan.App.Threads.ViewComponents
 {
     public class CreateThreadViewComponent: ViewComponent
     {

@@ -1,11 +1,9 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using NetChan.App.Boards;
 using NetChan.App.Boards.Views;
 using NetChan.Lib.FormBuilder;
-using NetChan.Models;
 
-namespace NetChan.Controllers
+namespace NetChan.App
 {
     [Route("/")]
     public class HomeController : Controller

@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using NetChan.App.Boards;
-using NetChan.App.Threads;
+using NetChan.App.Threads.Views;
 
-namespace NetChan.Controllers
+namespace NetChan.App.Boards
 {
     [Route("/")]
     public class BoardController: Controller
