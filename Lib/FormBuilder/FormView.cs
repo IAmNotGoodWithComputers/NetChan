@@ -17,7 +17,7 @@ namespace NetChan.Lib.FormBuilder
 
         public IHtmlContent RenderForm()
         {
-            var tagBuilder = new TagBuilder("form");
+            var tagBuilder = new TagBuilder("div");
             foreach (var viewField in Fields)
             {
                 IHtmlContent fieldTag;

@@ -1,0 +1,11 @@
+@model NetChan.Lib.FormBuilder.FormView<NetChan.App.Boards.Views.CreateBoardFormModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form asp-action="CreateBoardPost" method="POST">
+    @Model.RenderForm()
+    <input type="submit"/>
+</form>

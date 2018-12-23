@@ -33,3 +33,5 @@ msbuild.wrn
 # IDEs
 .vs/
 .idea
+
+Netchan.db

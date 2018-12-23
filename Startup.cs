@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetChan.App.Boards;
 using NetChan.Entities;
 
 namespace NetChan
@@ -22,6 +23,8 @@ namespace NetChan
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<NetchanDbContext>(options =>
                 options.UseSqlite("Data Source=Netchan.db"));
+
+            services.AddTransient<IBoardService, BoardService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
